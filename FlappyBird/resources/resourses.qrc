@@ -1,0 +1,28 @@
+<RCC>
+    <qresource prefix="/resources">
+        <file>audio/Hit.wav</file>
+        <file>audio/Point.wav</file>
+        <file>audio/Wing.wav</file>
+        <file>fonts/arial.ttf</file>
+        <file>fonts/FlappyFont.ttf</file>
+        <file>fonts/Marker Felt.ttf</file>
+        <file>images/bird-01.png</file>
+        <file>images/bird-02.png</file>
+        <file>images/bird-03.png</file>
+        <file>images/bird-04.png</file>
+        <file>images/Bronze-Medal.png</file>
+        <file>images/Game-Over-Body.png</file>
+        <file>images/Game-Over-Title.png</file>
+        <file>images/Gold-Medal.png</file>
+        <file>images/InvisibleScoringPipe.png</file>
+        <file>images/land.png</file>
+        <file>images/PipeDown.png</file>
+        <file>images/PipeUp.png</file>
+        <file>images/Platinum-Medal.png</file>
+        <file>images/PlayButton.png</file>
+        <file>images/Silver-Medal.png</file>
+        <file>images/sky.png</file>
+        <file>images/Splash Background.png</file>
+        <file>images/title.png</file>
+    </qresource>
+</RCC>
