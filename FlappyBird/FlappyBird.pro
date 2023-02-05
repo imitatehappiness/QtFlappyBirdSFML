@@ -11,5 +11,19 @@ INCLUDEPATH += $$PWD/SFML/include
 DEPENDPATH += $$PWD/SFML/include
 
 SOURCES += \
-        main.cpp
+        assetmanager.cpp \
+        game.cpp \
+        inputmanager.cpp \
+        main.cpp \
+        statemachine.cpp
+
+RESOURCES += \
+    resources/resourses.qrc
+
+HEADERS += \
+    assetmanager.h \
+    game.h \
+    inputmanager.h \
+    state.h \
+    statemachine.h
 
