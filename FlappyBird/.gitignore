@@ -1,3 +1,5 @@
+/SFML
+
 # C++ objects and libs
 *.slo
 *.lo
@@ -31,7 +33,9 @@ Makefile*
 *build-*
 *.qm
 *.prl
-
+debug
+release
+.qtc_clangd
 # Qt unit tests
 target_wrapper.*
 
@@ -50,3 +54,4 @@ compile_commands.json
 
 # QtCreator local machine specific files for imported projects
 *creator.user*
+
