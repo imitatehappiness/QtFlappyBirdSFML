@@ -12,19 +12,29 @@ DEPENDPATH += $$PWD/SFML/include
 
 SOURCES += \
         assetmanager.cpp \
+        bird.cpp \
         game.cpp \
+        gameoverstate.cpp \
+        gamestate.cpp \
         inputmanager.cpp \
+        land.cpp \
         main.cpp \
         mainmenustate.cpp \
+        pipe.cpp \
         splashstate.cpp \
         statemachine.cpp
 
 HEADERS += \
     assetmanager.h \
+    bird.h \
     defenitions.h \
     game.h \
+    gameoverstate.h \
+    gamestate.h \
     inputmanager.h \
+    land.h \
     mainmenustate.h \
+    pipe.h \
     splashstate.h \
     state.h \
     statemachine.h

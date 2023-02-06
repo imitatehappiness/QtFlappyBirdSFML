@@ -27,7 +27,7 @@ namespace FlappyBirdClone{
                 mData->window.close();
             }
             if(mData->input.isSpriteClicked(mPlayButton, sf::Mouse::Left, mData->window)){
-                std::cout << "go to game" << std::endl;
+                mData->machine.addState(stateRef(new GameState(mData)), true);
             }
         }
     }

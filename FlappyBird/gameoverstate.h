@@ -1,5 +1,6 @@
-#ifndef MAINMENUSTATE_H
-#define MAINMENUSTATE_H
+#ifndef GAMEOVERSTATE_H
+#define GAMEOVERSTATE_H
+
 
 #include <iostream>
 
@@ -7,16 +8,15 @@
 #include <state.h>
 #include <game.h>
 #include <defenitions.h>
-#include <gamestate.h>
 
 namespace FlappyBirdClone{
     /*!
-     * \class MainMenuState
-     * \brief Состояние главного меню
+     * \class GameOverState
+     * \brief Состояние окончания игры
      */
-    class MainMenuState : public State{
+    class GameOverState : public State{
     public:
-        MainMenuState(gameDataRef data);
+        GameOverState(gameDataRef data);
         void init() override;
         void handleInput() override;
         void update(float dt) override;
@@ -26,10 +26,7 @@ namespace FlappyBirdClone{
         gameDataRef mData;
         // Спрайт фона
         sf::Sprite mBackground;
-        // Спрайт тайтла
-        sf::Sprite mTitle;
-        // Спрайт кнопки
-        sf::Sprite mPlayButton;
     };
 }
-#endif // MAINMENUSTATE_H
+
+#endif // GAMEOVERSTATE_H
