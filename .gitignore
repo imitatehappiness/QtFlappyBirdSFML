@@ -54,5 +54,4 @@ compile_commands.json
 *.exe
 FlappyBird/debug/FlappyBird.exe
 FlappyBird/release/
-FlappyBird/.qtc_clangd/.cache/clangd/index
-.qtc_clangd/.cache/clangd/index
+FlappyBird/.qtc_clangd/.cache/clangd/index/*.idx*
