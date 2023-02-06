@@ -1,3 +1,7 @@
+FlappyBird/debug/
+FlappyBird/release/
+FlappyBird/*.qtc_clangd/
+
 # C++ objects and libs
 *.slo
 *.lo
@@ -52,7 +56,4 @@ compile_commands.json
 *creator.user*
 *.qmake.stash*
 *.exe
-FlappyBird/debug/FlappyBird.exe
-FlappyBird/release/
-FlappyBird/qtc_clangd/
 
