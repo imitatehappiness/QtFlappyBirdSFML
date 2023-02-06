@@ -1,4 +1,5 @@
 #include "assetmanager.h"
+
 namespace FlappyBirdClone{
     AssetManager::AssetManager(){}
 

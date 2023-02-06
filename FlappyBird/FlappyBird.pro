@@ -15,15 +15,17 @@ SOURCES += \
         game.cpp \
         inputmanager.cpp \
         main.cpp \
+        splashstate.cpp \
         statemachine.cpp
-
-RESOURCES += \
-    resources/resourses.qrc
 
 HEADERS += \
     assetmanager.h \
+    defenitions.h \
     game.h \
     inputmanager.h \
+    splashstate.h \
     state.h \
     statemachine.h
 
+RESOURCES += \
+    resources/resourses.qrc
