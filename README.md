@@ -1,4 +1,4 @@
-# Flappy bird game using C++/Qt and SFML
+# "Flappy bird" game using C++/Qt and SFML
 
 >**SFML:**  2.5.1 GCC 7.3.0 MinGW (SEH) - 64-bit
 >
