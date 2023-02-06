@@ -18,6 +18,7 @@ SOURCES += \
         game.cpp \
         gameoverstate.cpp \
         gamestate.cpp \
+        hud.cpp \
         inputmanager.cpp \
         land.cpp \
         main.cpp \
@@ -35,6 +36,7 @@ HEADERS += \
     game.h \
     gameoverstate.h \
     gamestate.h \
+    hud.h \
     inputmanager.h \
     land.h \
     mainmenustate.h \

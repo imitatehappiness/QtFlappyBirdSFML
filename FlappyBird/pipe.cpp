@@ -31,6 +31,13 @@ namespace FlappyBirdClone{
         mPipeSprites.push_back(sprite);
     }
 
+    void Pipe::spawnScoringPipe(){
+        sf::Sprite sprite(mData->assets.getTexture("Scoring Pipe"));
+        sprite.setPosition(mData->window.getSize().x, 0);
+
+        mScoringPipeSprites.push_back(sprite);
+    }
+
     void Pipe::movePipes(float dt){
         for(unsigned short i = 0; i < mPipeSprites.size(); ++i){
             if(mPipeSprites[i].getPosition().x < 0 - mPipeSprites[i].getGlobalBounds().width){
@@ -38,6 +45,15 @@ namespace FlappyBirdClone{
             }else{
                 float movement = PIPE_MOVEMENT_SPEED * dt;
                 mPipeSprites[i].move( -movement, 0);
+            }
+        }
+
+        for(unsigned short i = 0; i < mScoringPipeSprites.size(); ++i){
+            if(mScoringPipeSprites[i].getPosition().x < 0 - mScoringPipeSprites[i].getGlobalBounds().width){
+                mScoringPipeSprites.erase(mScoringPipeSprites.begin() + i);
+            }else{
+                float movement = PIPE_MOVEMENT_SPEED * dt;
+                mScoringPipeSprites[i].move( -movement, 0);
             }
         }
     }
@@ -55,5 +71,9 @@ namespace FlappyBirdClone{
 
     const std::vector<sf::Sprite>& Pipe::getPipeSprites() const{
         return mPipeSprites;
+    }
+
+    std::vector<sf::Sprite>& Pipe::getScoringPipeSprites(){
+        return mScoringPipeSprites;
     }
 }

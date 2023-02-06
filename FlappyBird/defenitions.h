@@ -20,6 +20,8 @@
 #define PIPE_MOVEMENT_SPEED 200.0f
 #define PIPE_SPAWN_FREQUENCY 1.2f
 
+#define PIPE_SCORING_FILEPATH "resources/images/InvisibleScoringPipe.png"
+
 #define LAND_FILEPATH "resources/images/Land.png"
 
 #define BIRD_FRAME_1_FILEPATH "resources/images/bird-01.png"
@@ -41,6 +43,8 @@
 #define GAME_OVER_BACKGROUND_FILEPATH "resources/images/sky.png"
 #define GAME_OVER_FLASH_SPEED 1500.0f
 
+#define SIZE_SCORE_TEXT 128
+#define FLAPPY_FONT_FILEPATH "resources/fonts/FlappyFont.ttf"
 /*!
  * \enum GameStates
  * \brief игровые состояния мини игрового конечного автомата
@@ -50,4 +54,5 @@ enum GameStates{
     ePlaying,
     eGameOver
 };
+
 #endif // DEFENITIONS_H

@@ -12,6 +12,7 @@
 #include <bird.h>
 #include <collision.h>
 #include <flash.h>
+#include <hud.h>
 
 namespace FlappyBirdClone{
     /*!
@@ -42,8 +43,14 @@ namespace FlappyBirdClone{
         Collision mCollision;
         // Выспышка
         Flash* mFlash;
+        // Худ
+        HUD* mHud;
         // Состояние игры согласно enum GameStates
         int mGameState;
+        // Счет
+        int mScore;
+
+
     };
 }
 #endif // GAMESTATE_H

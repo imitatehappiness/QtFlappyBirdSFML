@@ -9,18 +9,24 @@ namespace FlappyBirdClone{
         mData->assets.loadTexture("Game Background", GAME_BACKGROUND_FILEPATH);
         mData->assets.loadTexture("Pipe Up", PIPE_UP_FILEPATH);
         mData->assets.loadTexture("Pipe Down", PIPE_DOWN_FILEPATH);
+        mData->assets.loadTexture("Scoring Pipe", PIPE_SCORING_FILEPATH);
         mData->assets.loadTexture("Land", LAND_FILEPATH);
         mData->assets.loadTexture("Bird Frame 1", BIRD_FRAME_1_FILEPATH);
         mData->assets.loadTexture("Bird Frame 2", BIRD_FRAME_2_FILEPATH);
         mData->assets.loadTexture("Bird Frame 3", BIRD_FRAME_3_FILEPATH);
         mData->assets.loadTexture("Bird Frame 4", BIRD_FRAME_4_FILEPATH);
+        mData->assets.loadFont("Flappy Font", FLAPPY_FONT_FILEPATH);
 
         mLand = new Land(mData);
         mPipe = new Pipe(mData);
         mBird = new Bird(mData);
         mFlash = new Flash(mData);
+        mHud = new HUD(mData);
 
         mBackground.setTexture(mData->assets.getTexture("Game Background"));
+
+        mScore = 0;
+        mHud->updateScore(mScore);
 
         mGameState = GameStates::eReady;
     }
@@ -54,6 +60,7 @@ namespace FlappyBirdClone{
                 mPipe->spawnInvisiblePipe();
                 mPipe->spawnBottomPipe();
                 mPipe->spawnTopPipe();
+                mPipe->spawnScoringPipe();
 
                 mClock.restart();
             }
@@ -71,6 +78,17 @@ namespace FlappyBirdClone{
                     mGameState = GameStates::eGameOver;
                 }
             }
+
+            if(mGameState == GameStates::ePlaying){
+                std::vector<sf::Sprite>& pipeScoringSprites = mPipe->getScoringPipeSprites();
+                for(unsigned short int i = 0; i < pipeScoringSprites.size(); ++i){
+                   if(mCollision.checkSpriteCollision(mBird->getSprite(), 0.5f, pipeScoringSprites[i], 1.0f)){
+                        mScore++;
+                        mHud->updateScore(mScore);
+                        pipeScoringSprites.erase(pipeScoringSprites.begin() + i);
+                    }
+                }
+            }
         }
 
         if(mGameState == GameStates::eGameOver){
@@ -85,6 +103,7 @@ namespace FlappyBirdClone{
         mLand->drawLand();
         mBird->draw();
         mFlash->draw();
+        mHud->draw();
         mData->window.display();
     }
 }

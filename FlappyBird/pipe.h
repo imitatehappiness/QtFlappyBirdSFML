@@ -25,6 +25,8 @@ namespace FlappyBirdClone{
         void spawnTopPipe();
         // Генерация невидимых труб
         void spawnInvisiblePipe();
+        // Генерация скоринговых труб
+        void spawnScoringPipe();
         // Перемещение труб
         void movePipes(float dt);
         // Отрисовка труб
@@ -33,11 +35,16 @@ namespace FlappyBirdClone{
         void randomisePipeOffset();
         // Получение mPipeSprites
         const std::vector<sf::Sprite>& getPipeSprites() const;
+        // Получение mScoringPipeSprites
+        std::vector<sf::Sprite>& getScoringPipeSprites();
     private:
         // Игровые данные
         gameDataRef mData;
         // Спрайты труб
         std::vector<sf::Sprite> mPipeSprites;
+        // Спрайты скоринговых труб
+        std::vector<sf::Sprite> mScoringPipeSprites;
+
         // Высота трубы
         int mLandHeight;
         // Смещение появление трубы
