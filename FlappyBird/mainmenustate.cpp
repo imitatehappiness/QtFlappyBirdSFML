@@ -28,11 +28,7 @@ namespace FlappyBirdClone{
             }
             if(mData->input.isSpriteClicked(mPlayButton, sf::Mouse::Left, mData->window)){
                 std::cout << "go to game" << std::endl;
-                mPlayButton.setPosition((SCREEN_WIDHT / 2) - (mPlayButton.getGlobalBounds().width / 2), (SCREEN_HEIGHT/ 2) - (mPlayButton.getGlobalBounds().height / 2) + 5);
-            }else{
-                mPlayButton.setPosition((SCREEN_WIDHT / 2) - (mPlayButton.getGlobalBounds().width / 2), (SCREEN_HEIGHT/ 2) - (mPlayButton.getGlobalBounds().height / 2));
             }
-
         }
     }
 
