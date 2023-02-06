@@ -4,12 +4,6 @@
 
 namespace FlappyBirdClone{
     Game::Game(int widht, int height, std::string title){
-        sf::Image icon;
-        if (icon.loadFromFile("resources/icons/ninja.ico")){
-            std::cout<< "asdasd" << std::endl;
-            mData->window.setIcon(32, 32, icon.getPixelsPtr());
-        }
-
         mData->window.create(sf::VideoMode(widht, height), title, sf::Style::Close | sf::Style::Titlebar);
         mData->machine.addState(stateRef(new SplashState(mData)));
         run();

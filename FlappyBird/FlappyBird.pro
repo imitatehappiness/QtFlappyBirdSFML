@@ -15,6 +15,7 @@ SOURCES += \
         game.cpp \
         inputmanager.cpp \
         main.cpp \
+        mainmenustate.cpp \
         splashstate.cpp \
         statemachine.cpp
 
@@ -23,6 +24,7 @@ HEADERS += \
     defenitions.h \
     game.h \
     inputmanager.h \
+    mainmenustate.h \
     splashstate.h \
     state.h \
     statemachine.h
