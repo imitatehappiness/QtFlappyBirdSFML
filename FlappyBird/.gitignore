@@ -50,7 +50,6 @@ compile_commands.json
 
 # QtCreator local machine specific files for imported projects
 *creator.user*
-.qmake.stash
-/FlappyBird/debug/*.exe
-/FlappyBird/debug/
-/FlappyBird/release/
+*.qmake.stash*
+debug/
+release/
