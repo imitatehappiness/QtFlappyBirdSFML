@@ -52,5 +52,5 @@ compile_commands.json
 *creator.user*
 *.qmake.stash*
 *.exe
-debug/
+debug/FlappyBird.exe
 release/
