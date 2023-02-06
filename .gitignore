@@ -52,8 +52,7 @@ compile_commands.json
 *creator.user*
 *.qmake.stash*
 *.exe
-/FlappyBird/debug/FlappyBird.exe
-/FlappyBird/release/
-/FlappyBird/.qtc_clangd
-/FlappyBird/.qtc_clangd/
+FlappyBird/debug/FlappyBird.exe
+FlappyBird/release/
+FlappyBird/.qtc_clangd/
 
