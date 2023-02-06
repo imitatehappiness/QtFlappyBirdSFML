@@ -1,6 +1,6 @@
 FlappyBird/debug/
 FlappyBird/release/
-FlappyBird/*.qtc_clangd/
+FlappyBird/.qtc_clangd/
 
 # C++ objects and libs
 *.slo
