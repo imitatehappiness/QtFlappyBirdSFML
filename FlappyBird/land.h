@@ -14,9 +14,14 @@ namespace FlappyBirdClone{
      */
     class Land{
     public:
+        // Инициализация игровых данных
         Land(gameDataRef data);
+        // Перемещение ландшафта
         void moveLand(float dt);
+        // Отображение ландшафта
         void drawLand();
+        // Получение mLandSprites
+        const std::vector<sf::Sprite> &getSprites() const;
     private:
         // Игровые данные
         gameDataRef mData;

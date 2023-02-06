@@ -14,11 +14,18 @@ namespace FlappyBirdClone{
      */
     class Bird{
     public:
+        // Инициализация игровых данных
         Bird(gameDataRef data);
+        // Отображение птицы
         void draw();
+        // Анимация птицы
         void animate(float dt);
+        // Обновление
         void update(float dt);
+        // Обработка нажатия мыши
         void tap();
+        // Получение mBirdSprite
+        const sf::Sprite &getSprite() const;
     private:
         // Игровые данные
         gameDataRef mData;

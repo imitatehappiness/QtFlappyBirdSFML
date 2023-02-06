@@ -31,6 +31,8 @@ namespace FlappyBirdClone{
         void drawPipes();
         // Смещение трубы
         void randomisePipeOffset();
+        // Получение mPipeSprites
+        const std::vector<sf::Sprite>& getPipeSprites() const;
     private:
         // Игровые данные
         gameDataRef mData;

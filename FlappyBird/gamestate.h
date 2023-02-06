@@ -10,6 +10,8 @@
 #include <pipe.h>
 #include <land.h>
 #include <bird.h>
+#include <collision.h>
+#include <flash.h>
 
 namespace FlappyBirdClone{
     /*!
@@ -36,6 +38,12 @@ namespace FlappyBirdClone{
         Bird* mBird;
         // Часы для PIPE_SPAWN_FREQUENCY
         sf::Clock mClock;
+        // Коллизии столкновения
+        Collision mCollision;
+        // Выспышка
+        Flash* mFlash;
+        // Состояние игры согласно enum GameStates
+        int mGameState;
     };
 }
 #endif // GAMESTATE_H

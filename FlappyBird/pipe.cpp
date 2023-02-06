@@ -52,4 +52,8 @@ namespace FlappyBirdClone{
        std::uniform_int_distribution<size_t> distribution(0, mLandHeight);
        mPipeSpawnYOffset = distribution(generator.engine);
     }
+
+    const std::vector<sf::Sprite>& Pipe::getPipeSprites() const{
+        return mPipeSprites;
+    }
 }

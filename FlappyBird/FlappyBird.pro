@@ -13,6 +13,8 @@ DEPENDPATH += $$PWD/SFML/include
 SOURCES += \
         assetmanager.cpp \
         bird.cpp \
+        collision.cpp \
+        flash.cpp \
         game.cpp \
         gameoverstate.cpp \
         gamestate.cpp \
@@ -27,7 +29,9 @@ SOURCES += \
 HEADERS += \
     assetmanager.h \
     bird.h \
+    collision.h \
     defenitions.h \
+    flash.h \
     game.h \
     gameoverstate.h \
     gamestate.h \

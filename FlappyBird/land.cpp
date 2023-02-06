@@ -33,4 +33,8 @@ namespace FlappyBirdClone{
             mData->window.draw(mLandSprites[i]);
         }
     }
+
+    const std::vector<sf::Sprite>& Land::getSprites() const {
+        return mLandSprites;
+    }
 }

@@ -64,4 +64,8 @@ namespace FlappyBirdClone{
         mMovementClock.restart();
         mBirdState = BIRD_STATE_FLYING;
     }
+
+    const sf::Sprite& Bird::getSprite() const{
+        return mBirdSprite;
+    }
 }

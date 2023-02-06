@@ -18,8 +18,11 @@ namespace FlappyBirdClone{
         mLand = new Land(mData);
         mPipe = new Pipe(mData);
         mBird = new Bird(mData);
+        mFlash = new Flash(mData);
 
         mBackground.setTexture(mData->assets.getTexture("Game Background"));
+
+        mGameState = GameStates::eReady;
     }
 
     void GameState::handleInput(){
@@ -30,24 +33,49 @@ namespace FlappyBirdClone{
                 mData->window.close();
             }
             if(mData->input.isSpriteClicked(mBackground, sf::Mouse::Left, mData->window)){
-                mBird->tap();
+                if(mGameState != GameStates::eGameOver){
+                    mGameState = GameStates::ePlaying;
+                    mBird->tap();
+                }
             }
         }
     }
 
     void GameState::update(float dt){
-        mPipe->movePipes(dt);
-        mLand->moveLand(dt);
-        if(mClock.getElapsedTime().asSeconds() > PIPE_SPAWN_FREQUENCY){
-            mPipe->randomisePipeOffset();
-            mPipe->spawnInvisiblePipe();
-            mPipe->spawnBottomPipe();
-            mPipe->spawnTopPipe();
-
-            mClock.restart();
+        if(mGameState != GameStates::eGameOver){
+            mBird->animate(dt);
+            mLand->moveLand(dt);
         }
-        mBird->animate(dt);
-        mBird->update(dt);
+
+        if(mGameState == GameStates::ePlaying){
+            mPipe->movePipes(dt);
+            if(mClock.getElapsedTime().asSeconds() > PIPE_SPAWN_FREQUENCY){
+                mPipe->randomisePipeOffset();
+                mPipe->spawnInvisiblePipe();
+                mPipe->spawnBottomPipe();
+                mPipe->spawnTopPipe();
+
+                mClock.restart();
+            }
+            mBird->update(dt);
+            std::vector<sf::Sprite> landSprites = mLand->getSprites();
+            for(unsigned short int i = 0; i < landSprites.size(); ++i){
+               if(mCollision.checkSpriteCollision(mBird->getSprite(), 0.8f, landSprites[i], 1.0f)){
+                    mGameState = GameStates::eGameOver;
+                }
+            }
+
+            std::vector<sf::Sprite> pipeSprites = mPipe->getPipeSprites();
+            for(unsigned short int i = 0; i < pipeSprites.size(); ++i){
+               if(mCollision.checkSpriteCollision(mBird->getSprite(), 0.5f, pipeSprites[i], 1.0f)){
+                    mGameState = GameStates::eGameOver;
+                }
+            }
+        }
+
+        if(mGameState == GameStates::eGameOver){
+            mFlash->update(dt);
+        }
     }
 
     void GameState::draw(float /*dt*/){
@@ -56,6 +84,7 @@ namespace FlappyBirdClone{
         mPipe->drawPipes();
         mLand->drawLand();
         mBird->draw();
+        mFlash->draw();
         mData->window.display();
     }
 }

@@ -39,5 +39,15 @@
 #define MAX_ROTATION 25.0f
 
 #define GAME_OVER_BACKGROUND_FILEPATH "resources/images/sky.png"
+#define GAME_OVER_FLASH_SPEED 1500.0f
 
+/*!
+ * \enum GameStates
+ * \brief игровые состояния мини игрового конечного автомата
+ */
+enum GameStates{
+    eReady,
+    ePlaying,
+    eGameOver
+};
 #endif // DEFENITIONS_H
