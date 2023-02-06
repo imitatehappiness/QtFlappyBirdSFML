@@ -25,3 +25,5 @@ DEPENDPATH += $$PWD/SFML/include
 ```
 
 ```$$PWD``` - means the location of the pro project file, in which we register the project configuration and the connected files. 
+
+***Turn off Shadow Build in Qt Creator***
