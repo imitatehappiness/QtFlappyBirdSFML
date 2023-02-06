@@ -54,5 +54,5 @@ compile_commands.json
 *.exe
 FlappyBird/debug/FlappyBird.exe
 FlappyBird/release/
-FlappyBird/.qtc_clangd/
+FlappyBird/qtc_clangd/
 
