@@ -44,7 +44,7 @@ target_wrapper.*
 
 # QtCreator CMake
 CMakeLists.txt.user*
-
+*.idx*
 # QtCreator 4.8< compilation database 
 compile_commands.json
 
@@ -54,3 +54,5 @@ compile_commands.json
 *.exe
 FlappyBird/debug/FlappyBird.exe
 FlappyBird/release/
+FlappyBird/.qtc_clangd/.cache/clangd/index
+.qtc_clangd/.cache/clangd/index
