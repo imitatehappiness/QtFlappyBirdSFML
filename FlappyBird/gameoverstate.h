@@ -34,6 +34,8 @@ namespace FlappyBirdClone{
         sf::Sprite mContainer;
         // Спрайт кнопки "Play"
         sf::Sprite mRetryButton;
+        // Спрайт медали
+        sf::Sprite mMedal;
         // Текст набранных очков
         sf::Text mScoreText;
         // Текст лучшего результата

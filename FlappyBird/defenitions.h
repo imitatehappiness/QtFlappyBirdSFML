@@ -81,6 +81,25 @@
 /// \brief путь до файла с лучшим результатои
 #define HIGH_SCORE_FILEPATH "resources/highscore.txt"
 
+/// \group MEDAL
+/// \brief Компоненты медалей
+#define BRONZE_MEDAL_FILEPATH "resources/images/Bronze-Medal.png"
+#define SILVER_MEDAL_FILEPATH "resources/images/Silver-Medal.png"
+#define GOLD_MEDAL_FILEPATH "resources/images/Gold-Medal.png"
+#define PLATINUM_MEDAL_FILEPATH "resources/images/Platinum-Medal.png"
+#define BRONZE_MEDAL_SCORE 0
+#define SILVER_MEDAL_SCORE 5
+#define GOLD_MEDAL_SCORE 25
+#define PLATINUM_MEDAL_SCORE 100
+#define MEDAL_POSITION_W 175
+#define MEDAL_POSITION_H 465
+
+/// \group SOUND
+/// \brief Звуковые компоненты
+#define HIT_SOUND_FILEPATH "resources/audio/Hit.wav"
+#define POINTS_SOUND_FILEPATH "resources/audio/Point.wav"
+#define WING_SOUND_FILEPATH "resources/audio/Wing.wav"
+
 /*!
  * \enum GameStates
  * \brief игровые состояния мини игрового конечного автомата

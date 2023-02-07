@@ -29,6 +29,10 @@ namespace FlappyBirdClone{
         mData->assets.loadTexture("Game Over Background", GAME_OVER_BACKGROUND_FILEPATH);
         mData->assets.loadTexture("Game Over Title", GAME_OVER_TITLE_FILEPATH);
         mData->assets.loadTexture("Game Over Body", GAME_OVER_BODY_FILEPATH);
+        mData->assets.loadTexture("Bronze Medal", BRONZE_MEDAL_FILEPATH);
+        mData->assets.loadTexture("Silver Medal", SILVER_MEDAL_FILEPATH);
+        mData->assets.loadTexture("Gold Medal", GOLD_MEDAL_FILEPATH);
+        mData->assets.loadTexture("Platinum Medal", PLATINUM_MEDAL_FILEPATH);
 
         mBackground.setTexture(mData->assets.getTexture("Game Over Background"));
         mTitle.setTexture(mData->assets.getTexture("Game Over Title"));
@@ -55,6 +59,17 @@ namespace FlappyBirdClone{
         mHighScoreText.setFillColor(sf::Color::White);
         mHighScoreText.setOrigin(mHighScoreText.getGlobalBounds().width / 2, mHighScoreText.getGlobalBounds().height / 2);
         mHighScoreText.setPosition(mData->window.getSize().x / 10 * 7.25, mData->window.getSize().y / 1.78);
+
+        if(mScore >= PLATINUM_MEDAL_SCORE){
+            mMedal.setTexture(mData->assets.getTexture("Platinum Medal"));
+        }else if(mScore >= GOLD_MEDAL_SCORE){
+            mMedal.setTexture(mData->assets.getTexture("Gold Medal"));
+        }else if(mScore >= SILVER_MEDAL_SCORE){
+            mMedal.setTexture(mData->assets.getTexture("Silver Medal"));
+        }else{
+            mMedal.setTexture(mData->assets.getTexture("Bronze Medal"));
+        }
+        mMedal.setPosition(MEDAL_POSITION_W, MEDAL_POSITION_H);
     }
 
     void GameOverState::handleInput(){
@@ -82,6 +97,7 @@ namespace FlappyBirdClone{
         mData->window.draw(mRetryButton);
         mData->window.draw(mScoreText);
         mData->window.draw(mHighScoreText);
+        mData->window.draw(mMedal);
         mData->window.display();
     }
 }

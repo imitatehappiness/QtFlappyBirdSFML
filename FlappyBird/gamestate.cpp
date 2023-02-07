@@ -17,6 +17,20 @@ namespace FlappyBirdClone{
         mData->assets.loadTexture("Bird Frame 4", BIRD_FRAME_4_FILEPATH);
         mData->assets.loadFont("Flappy Font", FLAPPY_FONT_FILEPATH);
 
+        if(!mHitSoundBuffer.loadFromFile(HIT_SOUND_FILEPATH)){
+            std::cout << "Error loading Hit Sound Effect" << std::endl;
+        }
+        if(!mPointSoundBuffer.loadFromFile(POINTS_SOUND_FILEPATH)){
+            std::cout << "Error loading Point Sound Effect" << std::endl;
+        }
+        if(!mWingSoundBuffer.loadFromFile(WING_SOUND_FILEPATH)){
+            std::cout << "Error loading Wing Sound Effect" << std::endl;
+        }
+
+        mHitSound.setBuffer(mHitSoundBuffer);
+        mPointSound.setBuffer(mPointSoundBuffer);
+        mWingSound.setBuffer(mWingSoundBuffer);
+
         mLand = new Land(mData);
         mPipe = new Pipe(mData);
         mBird = new Bird(mData);
@@ -42,6 +56,7 @@ namespace FlappyBirdClone{
                 if(mGameState != GameStates::eGameOver){
                     mGameState = GameStates::ePlaying;
                     mBird->tap();
+                    mWingSound.play();
                 }
             }
         }
@@ -69,6 +84,7 @@ namespace FlappyBirdClone{
             for(unsigned short int i = 0; i < landSprites.size(); ++i){
                if(mCollision.checkSpriteCollision(mBird->getSprite(), 0.8f, landSprites[i], 1.0f)){
                     mGameState = GameStates::eGameOver;
+                    mHitSound.play();
                     mClock.restart();
                 }
             }
@@ -77,6 +93,7 @@ namespace FlappyBirdClone{
             for(unsigned short int i = 0; i < pipeSprites.size(); ++i){
                if(mCollision.checkSpriteCollision(mBird->getSprite(), 0.5f, pipeSprites[i], 1.0f)){
                     mGameState = GameStates::eGameOver;
+                    mHitSound.play();
                     mClock.restart();
                 }
             }
@@ -88,7 +105,8 @@ namespace FlappyBirdClone{
                         mScore++;
                         mHud->updateScore(mScore);
                         pipeScoringSprites.erase(pipeScoringSprites.begin() + i);
-                    }
+                        mPointSound.play();
+                   }
                 }
             }
         }

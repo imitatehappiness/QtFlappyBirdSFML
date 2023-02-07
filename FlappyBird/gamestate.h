@@ -4,6 +4,7 @@
 #include <iostream>
 
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include <state.h>
 #include <game.h>
 #include <defenitions.h>
@@ -50,8 +51,18 @@ namespace FlappyBirdClone{
         int mGameState;
         // Счет
         int mScore;
-
-
+        // Звуковой буфер удара
+        sf::SoundBuffer mHitSoundBuffer;
+        // Звуковой буфер получения очка
+        sf::SoundBuffer mPointSoundBuffer;
+        // Звуковой буфер взмаха
+        sf::SoundBuffer mWingSoundBuffer;
+        // Звук удара
+        sf::Sound mHitSound;
+        // Звук получения очка
+        sf::Sound mPointSound;
+        // Звук взмаха
+        sf::Sound mWingSound;
     };
 }
 #endif // GAMESTATE_H
