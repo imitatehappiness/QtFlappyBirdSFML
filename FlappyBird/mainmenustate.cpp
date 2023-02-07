@@ -12,8 +12,8 @@ namespace FlappyBirdClone{
         mData->assets.loadTexture("Main Menu Title Background", MAIN_MENU_TITLE_FILEPATH);
         mTitle.setTexture(mData->assets.getTexture("Main Menu Title Background"));
 
-        mData->assets.loadTexture("Main Menu Play Button Background", MAIN_MENU_PLAY_BUTTON_FILEPATH);
-        mPlayButton.setTexture(mData->assets.getTexture("Main Menu Play Button Background"));
+        mData->assets.loadTexture("Play Button", MAIN_MENU_PLAY_BUTTON_FILEPATH);
+        mPlayButton.setTexture(mData->assets.getTexture("Play Button"));
 
         mTitle.setPosition((SCREEN_WIDHT / 2) - (mTitle.getGlobalBounds().width / 2), (mTitle.getGlobalBounds().height / 2));
         mPlayButton.setPosition((SCREEN_WIDHT / 2) - (mPlayButton.getGlobalBounds().width / 2), (SCREEN_HEIGHT/ 2) - (mPlayButton.getGlobalBounds().height / 2));

@@ -3,10 +3,12 @@
 
 
 #include <iostream>
+#include <fstream>
 
 #include <SFML/Graphics.hpp>
 #include <state.h>
 #include <game.h>
+#include <gamestate.h>
 #include <defenitions.h>
 
 namespace FlappyBirdClone{
@@ -16,7 +18,7 @@ namespace FlappyBirdClone{
      */
     class GameOverState : public State{
     public:
-        GameOverState(gameDataRef data);
+        GameOverState(gameDataRef data, int score);
         void init() override;
         void handleInput() override;
         void update(float dt) override;
@@ -26,6 +28,20 @@ namespace FlappyBirdClone{
         gameDataRef mData;
         // Спрайт фона
         sf::Sprite mBackground;
+        // Спрайт тайтла окончания игры
+        sf::Sprite mTitle;
+        // Спрайт контейнера окончания игры со счетом и медалью
+        sf::Sprite mContainer;
+        // Спрайт кнопки "Play"
+        sf::Sprite mRetryButton;
+        // Текст набранных очков
+        sf::Text mScoreText;
+        // Текст лучшего результата
+        sf::Text mHighScoreText;
+        // Набранные очки
+        int mScore;
+        // Лучший результат
+        int mHighScore;
     };
 }
 

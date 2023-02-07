@@ -69,6 +69,7 @@ namespace FlappyBirdClone{
             for(unsigned short int i = 0; i < landSprites.size(); ++i){
                if(mCollision.checkSpriteCollision(mBird->getSprite(), 0.8f, landSprites[i], 1.0f)){
                     mGameState = GameStates::eGameOver;
+                    mClock.restart();
                 }
             }
 
@@ -76,6 +77,7 @@ namespace FlappyBirdClone{
             for(unsigned short int i = 0; i < pipeSprites.size(); ++i){
                if(mCollision.checkSpriteCollision(mBird->getSprite(), 0.5f, pipeSprites[i], 1.0f)){
                     mGameState = GameStates::eGameOver;
+                    mClock.restart();
                 }
             }
 
@@ -93,6 +95,9 @@ namespace FlappyBirdClone{
 
         if(mGameState == GameStates::eGameOver){
             mFlash->update(dt);
+            if(mClock.getElapsedTime().asSeconds() > TIME_BEFORE_GAME_OVER){
+                mData->machine.addState(stateRef(new GameOverState(mData, mScore)), true);
+            }
         }
     }
 

@@ -13,6 +13,7 @@
 #include <collision.h>
 #include <flash.h>
 #include <hud.h>
+#include <gameoverstate.h>
 
 namespace FlappyBirdClone{
     /*!
