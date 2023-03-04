@@ -1,4 +1,6 @@
-# "Flappy bird" clone game using C++/Qt and SFML
+## About The Project
+
+"Flappy bird" clone game using C++/Qt and SFML.
 
 >**SFML:**  2.5.1 GCC 7.3.0 MinGW (SEH) - 64-bit
 >
@@ -6,9 +8,9 @@
 >
 >**Profile Qt:**  5.15.2 MinGW 64-bit
 
-# How to build the project
+## How to build the project
 
-### Download the SFML library [here](https://www.sfml-dev.org/).
+Download the SFML library [here](https://www.sfml-dev.org/).
 
 Can download precompiled SFML libraries, but if you have a compiler that is different from the one that these libraries were assembled, then nothing will work.  Assemble a library with that compiler, which you will build the project.
 
@@ -26,7 +28,7 @@ DEPENDPATH += $$PWD/SFML/include
 
 ```$$PWD``` - means the location of the pro project file, in which we register the project configuration and the connected files. 
 
-### ***Turn off Shadow Build in Qt Creator***
+### Turn off Shadow Build in Qt Creator
 ---
 <p align="center">
   <img src="https://user-images.githubusercontent.com/79199956/217288394-d9f0beb4-1079-4283-9d8b-180487abe39b.gif" />
