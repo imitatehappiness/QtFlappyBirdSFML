@@ -1,13 +1,12 @@
 
 <p align="center">
   <a href="https://github.com/imitatehappiness/QtFlappyBirdSFML">
-    <img src="https://cdn.worldvectorlogo.com/logos/flappy-bird.svg" alt="Logo" width="600" height="200">
-    <img src="https://user-images.githubusercontent.com/79199956/222868870-44dac94e-e393-4c2d-a8fc-196c5f361b6e.png" alt="Logo" width="100" height="80">
+    <img src="https://cdn.worldvectorlogo.com/logos/flappy-bird.svg" alt="Logo" width="600" height="200">  
   </a>
 
+  
   <h3 align="center"></h3>
 </p>
-
 
 ## About The Project
 
