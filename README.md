@@ -8,8 +8,9 @@
   <h3 align="center"></h3>
 </p>
 
-## About The Project
+# Flappy Bird Clone Game using C++/Qt and SFML
 
+This project is a clone of the popular mobile game "Flappy Bird," implemented using C++ programming language with the Qt and SFML libraries. The game has been recreated as a fun learning exercise to explore C++ programming, game development, and the integration of Qt and SFML for creating interactive applications.
 "Flappy bird" clone game using C++/Qt and SFML.
 
 >**SFML:**  2.5.1 GCC 7.3.0 MinGW (SEH) - 64-bit
@@ -17,6 +18,11 @@
 >**Compiler:**  MinGW 8.1.0 64-bit
 >
 >**Profile Qt:**  5.15.2 MinGW 64-bit
+
+## Features
++ Simple and addictive gameplay inspired by the original "Flappy Bird" game.
++ Utilization of SFML for handling graphics and sound.
++ Implementation of basic physics for character movement, game controls, and scoring.
 
 ## How to build the project
 
@@ -39,7 +45,8 @@ DEPENDPATH += $$PWD/SFML/include
 ```$$PWD``` - means the location of the pro project file, in which we register the project configuration and the connected files. 
 
 ### Turn off Shadow Build in Qt Creator
----
+
+## Example
 <p align="center">
   <img src="https://user-images.githubusercontent.com/79199956/217288394-d9f0beb4-1079-4283-9d8b-180487abe39b.gif" />
 </p>
