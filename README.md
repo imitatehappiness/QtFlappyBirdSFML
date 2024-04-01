@@ -10,6 +10,11 @@
 
 # Flappy Bird Clone Game using C++/Qt and SFML
 
+![GitHub stars](https://img.shields.io/github/stars/imitatehappiness/QtFlappyBirdSFML?style=social)
+![GitHub forks](https://img.shields.io/github/forks/imitatehappiness/QtFlappyBirdSFML?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/imitatehappiness/QtFlappyBirdSFML?style=social)
+![GitHub followers](https://img.shields.io/github/followers/imitatehappiness?style=social)
+
 This project is a clone of the popular mobile game "Flappy Bird," implemented using C++ programming language with the Qt and SFML libraries. The game has been recreated as a fun learning exercise to explore C++ programming, game development, and the integration of Qt and SFML for creating interactive applications.
 "Flappy bird" clone game using C++/Qt and SFML.
 
